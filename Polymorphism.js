@@ -1,3 +1,12 @@
+class Circle{
+    constructor(radius){
+        this.radius = radius
+    }
+    area(){
+        return Math.PI * Math.pow(this.radius , 2)
+    }
+}
+
 class Rectangle{
     constructor(height , width){
         this.height = height
@@ -16,7 +25,11 @@ class Triangle{
         return this.base * this.height /2
     }
 }
-const Rectangle1 = new Rectangle(10,12)
-console.log(Rectangle1.area());
-const Triangle1 = new Triangle(12,10)
-console.log(Triangle1.area());
+
+const shapes = [new Circle(8), new Rectangle(10,12), new Triangle(10,12)]
+
+for (let i = 0; i < shapes.length; i++) {
+    const shape = shapes[i];
+    console.log(shape.area());
+    
+}
